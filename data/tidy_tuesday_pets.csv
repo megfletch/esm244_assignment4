@@ -1,0 +1,41 @@
+Timestamp,Human's name:,Pet's name: ,Pet species: ,Pet age (years): ,Pet nicknames (separate with a comma):,Pet's favorite location:,"If your pet were an R package, what package would it be? Package name only: ",Why would your pet be that R package? ,Pet's primary color: ,Estimated pet weight (pounds): ,Estimated number of vocalizations per day: ,Number of treats per day: ,Number of treats demanded per day: ,Estimated number of Zoom meeting interruptions each week: 
+2/22/2021 18:53:51,Keene,Souris,Cat,5,"Sou Sou, Her Highness, Queen Souris",The penut butter box,Shiny: a bit fussy at times but wonderful if everything is just right,,,,,,,
+2/22/2021 19:34:46,Cameryn Brock,Fox,Cat,1.5,"Fox in a Box, Foxer Boxer, Buddy, Floofy",In a fort,janitor,He dusts our house with his fluffy tail!,Black,10,40,2,6,6
+2/22/2021 19:35:48,Ronnie Steinitz,Gizmo,Dog,9,"Peanut, the nut, princess gizmarelda, senior eyebrows",Grandma’s house,Remedy,Creates his own rules that no one else is privy to,Grey,70,3,7,70,5
+2/22/2021 19:39:08,Ronnie Steinitz,Gadget,Dog,0.9,"Gadgedito, Gadgrick McPotatoson, Shitstain",Where his brother is,Pacman,He’s currently installing new packages and learning how to load installed ones,Grey,70,10,5,2,7
+2/22/2021 19:39:18,Allison Horst,Teddy,dog,3,"Tedders, Fredders, Tedder Fredder Fritter Fry, Teddyhoula, Boots",Bed,testthat,Because he puts on a performance anytime he thinks something is going even a little bit wrong (like a squirrel is walking outside). ,Brown,50,3,3,10,2
+2/22/2021 19:42:32,Meghan,Lilly,golden retriever,1.5,"Bean, Beiben, Schmeeben",ellwood butterfly beach,broom,No crumbs get left behind!,gold,55,5,10,10000,2
+2/22/2021 19:46:49,Cameryn Brock,Rey (Pawpatine-Skywhisker),Cat,1.8,"Reybellina, Sweetie, Little Lady, Rayqueza",In the pantry,ggmap,Because she makes it hard to get to know her at first but once you do she's great! (albeit she is still way better than ggmap),White,9.5,10,2,0,2
+2/22/2021 19:56:05,Erin Winslow,Scallop,Dog,0.7,"Scallopina, Scallywag, Scalzone, Scalbean",Woodchips in the sun ,fishualize,every color scheme looks good on her ,White,34lbs,1,4,0,1
+2/22/2021 19:59:07,Kazia,Kona,Canis lupis familiaris,7,"conical one, wonderbeast",beach,ggplot2,because he paints pictures with his barks,black,75,50,3,5,5
+2/22/2021 20:01:03,Evan,Reesie,Cat,8,"Lumpkin pumpkin, Reeses pieces, Mrs. Pieces, Weesie",Sun,Purrr,Because cat,Brown,13,50,1,10,0
+2/22/2021 20:04:00,Ian,Cisco,Dog,9,"bud, fluffy, disco",The beach,lubridate,He makes the days easier.,brown,38,1,5,10,0
+2/22/2021 20:04:52,Kristin,Benny,Toy Poodle,9,"Benjamin, Ben, Benster",the couch,,,white,6,50,5,10,0
+2/22/2021 20:14:54,Garrett Eyer,Mister Kitty,Cat,3,"Crisp, Fat Boy",Cat Tower,plumber,he's always messing with the litter box,gray,16,65,4,25,20
+2/22/2021 20:59:42,Dana,Blue,Dog,10,"Blue, Blueberry, Lloyd, Bigboy",Douglas Preserve,cats,He wants to be a cat,Black,75,0 (he talks with his one eye),1,1000,4
+2/22/2021 20:59:51,Taylor,Blueberry,Cat,1,"Blue, Blucifer, Blue Berrymore, The Berry, Lord Berrymore",The basket of his cat tree,mousetrap,His favorite toy is a little red mouse that he has absolutely destroyed.,White,13,5,3,5,4
+2/22/2021 21:47:20,Julia,Daisy,Goldendoodle,6,Daisydoodle,"Hendry's Beach, the couch",whisker,She has a fabulous mustache and declines logic :),Yellow,75,30,3,10,5
+2/22/2021 22:48:11,Allison Bailey,Porter,Dog,14,"P Man, Mr. P, Poppa Bear, Sausage Man, Dancing Bear",Back Patio,Plotly ,He’s always plotting ,Brown,55,5,2,10,6
+2/22/2021 22:51:03,Allison Bailey,Dawn,Dog,11,"Madawna, Dawny Darko, Dangerous Dawn, Turd Burglar ",Middle of any room a human is in,Glue,She follows me around ,Brown,45,0,2,3,0
+2/22/2021 23:04:22,Dani Sclafani,Bennie,Dog,0.33,"Little Man, Mushroom, frutzy, fuzzy head",under my chair,lubridate,because he is always on time for a 6:30 am wake up call,black,23,5,10,30,6
+2/22/2021 23:20:28,Anna,Jitter,Bunny,1,"Jitterbug, Bun Bun, Mister",In his hay basket,Tidyverse,Because geom_jitter,Black,4,"0, but that is a good thing!",1,,2
+2/23/2021 7:12:15,Dylan Glave,Bandit,Dog,3,"Lil Queen, dito, trashmonster, pan-licker",Hendrys Beach tide pools,strickr,he loves sticks,black,30,140,1,10,18
+2/23/2021 8:31:59,Ana,Salsa,dog,1,"Chico, Waltzer",creeks,testthat,he is forever testing boundaries and expectations on obedience,black,66,85,20,0,3
+2/23/2021 8:40:49,Tiffany Pan,Mochi,Dog,2,"Moch Moch, Doggo, Puppo",,fuzzywuzzyr,"She mixes up her ""sit"" and ""down"" commands, but it's close enough",Brown,27,30,2,0,5
+2/23/2021 8:58:08,Vanessa,Bristol,Catahoula/Pit Bull ,5,"Miss Briss, Miss B, Beans, Saweetie, B, Brissy",Bed or Beach,praise,"we talk in full sentences to each other, mostly all praise",Black,175,0,1,4,14
+2/23/2021 8:58:25,Tiffany Pan,Kamala,Cat,O.5,"Lil Veep, Fat Kitty, Little Piggy, Kamamamamala",Kitchen counter,rvest,Kamala has learned to scrape our house for everyone else's food and will come running when any of her fur-siblings is being fed.,Tortoiseshell,6,15,0,3,3
+2/23/2021 9:01:52,Tiffany Pan,Paily,Cat,8,,Under a blanket,,,Brown,6,5,0,0,0
+2/23/2021 10:09:49,Emily,Tifa,cat,0.8,"teef, bubbles ",lap,sf,Likes to look out at the features of the world but keeps it simple.,black ,6,25,1,1,5
+2/23/2021 10:11:21,Emily,Auggie,cat,0.8,"auggie-poggie, ogg ",basket ,tidyverse,Likes things being tidy and neat; has her own way of doing things.,gray,7,10,1,6,2
+2/23/2021 10:33:08,Megsie Siple,Squirrel,Cat,11,"Squirrely Girl, SQL, Squail, Squirrely Nut",Top of harpsichord,usethis,"Squirrel is the smartest cat EVER! She knows tricks, she recognizes people after months, and she never forgets to hold a grudge when its warranted. She's like usethis because she's the absolute freaking best.",Black,10,30,10,10000,3
+2/23/2021 10:37:03,Megsie Siple,Molly,Cat,11,"Ms Magic Molly Moll, MeowMeow, Pretty Princess, Molly Bug, Beautiful Princess, Babygirl, Meowly Meow ",Under the covers,patchwork,"She is a beautiful calico (thus very literally a patchwork), and she makes my life complete. Every day I'm with her is the best day ever.",White,16,8,0,0,10
+2/23/2021 10:39:27,Megsie Siple,MOBY,Dog,7,"Goggins, Mogulstein, MobyOpie, Muffinhead",window seat,learnr,"Because he's so friendly and pleasant and easygoing. He is my favorite companion, and he loves kids!",Black,110,12,24,100000,3
+2/23/2021 12:22:44,Sam Csik,Tallie,dog,2.5,"tallie tuna, bean, tallie tuna and cheese burrito, tunaroo, tuna b, tbear",the hiking trails,beepr,"Whenever she's excited, she ""woos"" (not to be confused with a bark), just like whenever I finish running some time-intensive code, beepr lets me know so I can take a moment to celebrate and be excited :)",golden brown,55,15,1,1000000,1 (she prefers the couch or a sunny dirt patch in the yard over the not-very-sunny-spare room)
+2/23/2021 12:25:57,Casey,Waffle,dog,0.9,Sir Jonathan Wallington Falstaff,wherever I am,waffle,he is a big fan of square pie charts,tan,28,15,5,10,8
+2/23/2021 13:14:54,Melissa Thaw ,Napoleon ,dog ,17,"Nipolis, Nappy, Bitey-boy",Yosemite Valley  ,Base R ,He's too old to be an R package ,black ,10 lbs ,40,300 grams ,600 grams ,None 
+2/24/2021 9:17:28,Sydney,Crayola,cat,12,"hola, holabola, hissygirl",rocking chair,here,she announces herself when you are near or too close of her (I'm here),gray,9,15,3,1,0
+2/24/2021 9:27:29,Sydney,Alexander,desert tortoise,70,Alex,sitting in the sun,os.hibernate,"This Hibernates Windows after set amount of time, he hibernates each winter",brown,13,0,0,0,1
+2/24/2021 10:41:31,Dina Arch,Zafira,Cat,5,"Zaffie, Zaf","Next to the window, baking in the sun",purrr,loves to purr :D,Blue,8,20,12,25,5
+2/24/2021 10:45:41,Dina Arch,Ned,Cat,7,Kitty,In the closet,tidyr,"Loves to sit on ""tidy"" areas like the fresh laundry",Tabby,20,10,15,100,2
+2/25/2021 17:10:03,Marie Bouffard,Mitzi,Cat,13,"Mit, Mitten, Mitz, Kitty kitty, cat, katten, fur factory",fireplace,purr,She's a cuddler,white,15,24,3,12,1
+2/25/2021 17:12:34,Marie Bouffard,Elliott,Dog,12,"Ellwwwiot, bud, buddy, pup, pup pup",Kitchen floor,adventr,He was a big hiker in his younger days,Black,52,6,3,0,10

@@ -1,0 +1,62 @@
+---
+title: "Tidy Tuesday - Pets Edition"
+author: "Meghan Fletcher"
+date: "3/2/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(here)
+library(janitor)
+```
+
+
+```{r}
+pet_data <- read_csv(here("data", "tidy_tuesday_pets.csv")) %>% 
+  clean_names() %>% 
+  mutate(pets_primary_color = tolower(pets_primary_color)) %>%
+  drop_na() 
+  
+
+pet_color <- pet_data %>% 
+  select(pets_primary_color) %>% 
+  group_by(pets_primary_color) %>% 
+  count() %>% 
+  arrange(-n) %>% 
+  mutate(color = case_when(
+    pets_primary_color == "black" ~ "black",
+    pets_primary_color == "brown" ~ "brown",
+    pets_primary_color == "white" ~ "white",
+    pets_primary_color == "grey" ~ "gray",
+    pets_primary_color == "gray" ~ "gray",
+    pets_primary_color == "blue" ~ "blue",
+    pets_primary_color == "gold" ~ "gold",
+    pets_primary_color == "golden brown" ~ "gold",
+    pets_primary_color == "grey" ~ "gray",
+    pets_primary_color == "tan" ~ "tan",
+    pets_primary_color == "tabby" ~ "tan",
+    pets_primary_color == "tortoiseshell" ~ "brown",
+    pets_primary_color == "yellow" ~ "yellow"
+  )) 
+```
+
+
+```{r}
+ggplot(data = pet_color, aes(x = color, y = n, fill = pets_primary_color)) +
+  geom_col() +
+  coord_flip() +
+  scale_color_manual(values = c("yellow", "white", "lightbrown"))
+```
+
+
+
+
+
+
+
+
+
+
