@@ -1,5 +1,5 @@
 ---
-title: "Parameter Estimation"
+title: "Task2: Parameter Estimation of Wild Fish Catch"
 author: "Meghan Fletcher"
 date: "3/2/2021"
 output: 
@@ -9,5 +9,44 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+library(tidyverse)
+library(here)
+library(janitor)
 ```
+
+**Overview:**
+
+```{r}
+# Read in the data:
+fish_data <- read_csv(here("data", "fish_catch.csv")) %>% 
+  clean_names() %>% 
+  rename(year = world_wild_fish_catch_and_farmed_fish_production_1950_2012,
+         wild_catch = x2,
+         farmed_fish = x3,
+         total_fish = x4) %>% 
+  slice(-(1:4)) %>% 
+  slice(-(64:67)) %>% 
+  mutate(year = as.numeric(0:62)) # To convert 1950-2012 to 0-62 years
+```
+
+```{r}
+# Create an exploratory graph of wild fish catch over time
+ggplot(data = fish_data, aes(x = year, y = wild_catch)) +
+  geom_point() +
+  theme_bw()
+```
+
+
+
+
+
+
+
+
+
+
+
+**Data citation:** Global wild fish catch and aquaculture production, compiled by Earth Policy Institute with 1950-2010 from U.N. Food and Agriculture Organization (FAO), Global Capture Production and Global Aquaculture Production, electronic databases, at www.fao.org/fishery/topic/16140/en.
+
 
