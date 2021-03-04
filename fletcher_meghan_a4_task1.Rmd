@@ -1,5 +1,5 @@
 ---
-title: "Agglomerative Heirarchical CLustering"
+title: "Task 1: Agglomerative Heirarchical Clustering"
 author: "Meghan Fletcher"
 date: "3/2/2021"
 output: 
@@ -9,5 +9,87 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+library(tidyverse)
+library(here)
+library(janitor)
+
+# Packages for cluster analysis:
+library(NbClust)
+library(cluster)
+library(factoextra)
+library(dendextend)
+library(ggdendro)
 ```
+
+**Overview:** A hierarchical clustering analysis was performed to compare similarities and dissimilarities of the water content of the different streams assessed in a study conducted by John Melack and his team from the Santa Barbara Coastal LTER from 2000 to 2018.
+
+```{r}
+# Read in the data
+stream_data <- read_csv(here("data", "sbc_lter_registered_stream_chemistry.csv")) %>% 
+  clean_names() %>% 
+  na_if(-999)
+
+  
+```
+
+```{r}
+# Group and summarize the data by site:
+stream_sum <- stream_data %>% 
+  group_by(site_code) %>% 
+  summarize(nh4_u_m = mean(nh4_u_m, na.rm = TRUE),
+            no3_u_m = mean(no3_u_m, na.rm = TRUE),
+            po4_u_m = mean(po4_u_m, na.rm = TRUE),
+            tdn_u_m = mean(tdn_u_m, na.rm = TRUE),
+            tdp_u_m = mean(tdp_u_m, na.rm = TRUE),
+            tpc_u_m = mean(tpc_u_m, na.rm = TRUE),
+            tpn_u_m = mean(tpn_u_m, na.rm = TRUE),
+            tpp_u_m = mean(tpp_u_m, na.rm = TRUE),
+            tss_mgper_liter = mean(tss_mgper_liter, na.rm = TRUE),
+            spec_cond_u_spercm = mean(spec_cond_u_spercm, na.rm = TRUE),
+            ) %>% 
+  drop_na() # Need to drop all NaN values
+```
+
+
+```{r}
+# Scale the numeric columns (columns 3 - 10):
+stream_scaled <- stream_sum %>% 
+  select(2:11) %>% 
+  scale()
+
+# Add row names (aka sites):
+rownames(stream_scaled) <- stream_sum$site_code
+```
+
+```{r}
+# Find the Euclidian distances (ie. compute dissimilarity values):
+stream_euc_distance <- dist(stream_scaled, method = "euclidian")
+```
+
+```{r, fig.cap="**Figure 1:** This hierarchical clustering analaysis allows us to compare the similarity and dissimilary in nitrogen and phosphorus content across the 9 streams. Four streams were excluded from this dendogram because they contained NA values for some of the variables assessed. In the future, it would be important to include those other sites to prepare a more concrete and finalized assessment (Data: Melack et al. 2019)."}
+# Perform heirarchical clustering using complete linkage:
+stream_cluster <- hclust(stream_euc_distance, method = "complete")
+
+plot(stream_cluster, cex = 0.6, hang = -1)
+```
+
+
+
+**Data citation:** SBC LTER: Stream chemistry in the Santa Barbara Coastal drainage area, ongoing since 2000
+Creators: Santa Barbara Coastal LTER, & Melack, John M
+Citation: Santa Barbara Coastal LTER and J. Melack. 2019. SBC LTER: Land: Stream chemistry in the Santa Barbara Coastal drainage area, ongoing since 2000 ver 16. Environmental Data Initiative. https://doi.org/10.6073/pasta/67a558a24ceed9a0a5bf5e46ab841174. 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
