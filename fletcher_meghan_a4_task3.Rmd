@@ -1,10 +1,9 @@
 ---
-title: "Bootstrapped Confidence Interval for Proportions"
+title: "Task 3: Bootstrapped Confidence Interval for Proportions"
 author: "Meghan Fletcher"
 date: "3/2/2021"
-output: 
-  html_document:
-    code_folding: hide
+output: html_document
+
 ---
 
 ```{r setup, include=FALSE}
@@ -19,18 +18,56 @@ library(broom)
 library(nlstools)
 ```
 
-**Overview:**
+**Overview:** Using the data from the 2014 UCSB Campus Climate Project Final Report, the objective of this report was to use bootstrapping to find the proportion of UCSB nonbinary/genderqueer students that reported experiencing “exclusionary, offensive, hostile or intimidating conduct.” From this analysis, a 95% confidence interval for the data was also found.
+
+```{r}
+# Created a data set outside of R to retrieve the initial vector data 
+#ie. 22/36 nonbinary/genderqueer students who reported experiencing exclusionary conduct
+ucsb_data <- read_csv(here("data", "ucsb_gender3.csv"))
+```
+
+```{r, include = FALSE, echo = FALSE}
+# Look at the data from different angles:
+hist(ucsb_data$results)
+mean(ucsb_data$results)
+t.test(ucsb_data$results)
+
+```
+
+```{r}
+# Create function to calculate the mean of each bootstrapped sample:
+prop_fun <- function (x,i) {mean(x[i])}
 
 
+# Get vector of bad experience proportions:
+gender_bs <- ucsb_data$results
 
+# Create a bootstrap using 10,000 samples
+genderboot_10k <- boot(gender_bs,
+                    statistic = prop_fun,
+                    R = 10000)
+# genderboot_10k
+```
 
+```{r}
+# Make vectors of bootstrap sample means a data frame (so ggplot will deal with it).
+genderboot_10k_df <- data.frame(bs_proportion = genderboot_10k$t)
+```
 
+```{r, echo = FALSE}
+# Create a histogram of the 10k bootstrap sample means:
+ggplot(data = genderboot_10k_df, aes(x = bs_proportion)) +
+  geom_histogram(bins = 22, fill = "cyan4") +
+  theme_bw() +
+  labs(x = "Proportoin of nonbinary/genderqueer students who report experiencing exclusionary conduct", y = "Count")
+```
 
+```{r, echo = FALSE, include = FALSE}
+# Find the 95% confidence interval:
+boot.ci(genderboot_10k, conf = 0.95)
+```
 
-
-
-
-
+Bootstrapping the data allows for re-sampling **with** replacement in order to increase the amount of information we have from our single sample of nonbinary/genderqueer UCSB students. Using a higher number of bootstrap samples (R) - in this case 10,000 - helps to improve the accuracy of the results. Using a 95% bootstrapped confidence interval, it is expected that 9,500 out of the 10,000 calculated confidence intervals will contain the actual proportion of nonbinary/genderqueer UCSB students who would respond that they experienced “exclusionary, offensive, hostile or intimidating conduct." Therefore, it is highly likely that the true proportion of UCSB students who would respond that they experienced “exclusionary, offensive, hostile or intimidating conduct" would be somewhere between 0.4444 and 0.7778 (or 44% and 78%). 
 
 
 
