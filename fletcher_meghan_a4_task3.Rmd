@@ -9,5 +9,31 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+library(tidyverse)
+library(here)
+library(boot)
+library(gt)
+library(patchwork)
+library(broom)
+library(nlstools)
 ```
 
+**Overview:**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Data citation:** 2014 UCSB Campus Climate Project Final Report (prepared by Rankin & Associates Consulting, available at http://campusclimate.ucop.edu/_common/files/pdf-climate/ucsb-full-report.pdf).
